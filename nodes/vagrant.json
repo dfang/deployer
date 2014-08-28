@@ -1,0 +1,12 @@
+{
+  "pptpd": {
+    "username": "username",
+    "password": "password"
+  },
+  "run_list": [
+    "recipe[pptpd::default]"
+  ],
+  "automatic": {
+    "ipaddress": "127.0.0.1"
+  }
+}
