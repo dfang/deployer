@@ -1,7 +1,7 @@
 deploy_vpn
 ==========
 
-install and configure a vpn on a ubuntu server (pptp)
+install and configure a pptp vpn server on a ubuntu server (12.04 or 14.04)
 
 1. upload your public key to your server
  `ssh-copy-id ubuntu@ip`
