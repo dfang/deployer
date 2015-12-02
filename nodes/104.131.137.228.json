@@ -1,0 +1,23 @@
+{
+  "pptpd": {
+    "username": "john",
+    "password": "1986kb23"
+  },
+  "run_list": [
+    "recipe[pptpd::default]",
+    "recipe[l2tp-ipsec::default]"
+  ],
+  "automatic": {
+    "ipaddress": "0.0.0.0"
+  },
+  "users": [
+    { "username": "bob",
+      "vpn_password": "password"
+    }
+  ],
+  "l2tp-ipsec":{
+      "openswan": {
+        "preshared_key": "letmein"
+      }
+  }
+}

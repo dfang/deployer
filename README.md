@@ -12,7 +12,7 @@ install and configure a pptp vpn server on a ubuntu server (12.04 or 14.04)
 
 4. change nodes/ip.json(refering nodes/vagrant.json)
 
-5. `knife solo cook ubuntu@ip`
+5. `knife solo cook ubuntu@ip [nodes/vpn.json]`
 
 6. now you can connect to your server if configue your vpn correctly on your mac.
    username and password is in ip.json and the vpn type is pptp
