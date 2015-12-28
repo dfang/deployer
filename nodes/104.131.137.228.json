@@ -3,12 +3,6 @@
     "username": "john",
     "password": "1986kb23"
   },
-  "run_list": [
-    "recipe[pptpd::default]",
-    "recipe[l2tp-ipsec::default]",
-    "recipe[golang]",
-    "recipe[golang::packages]"
-  ],
   "automatic": {
     "ipaddress": "104.131.137.228"
   },
@@ -29,5 +23,12 @@
     "packages": [
       "github.com/shadowsocks/shadowsocks-go/cmd/shadowsocks-server"
     ]
-  }
+  },
+  "run_list": [
+    "recipe[pptpd::default]",
+    "recipe[l2tp-ipsec::default]",
+    "recipe[golang]",
+    "recipe[golang::packages]"
+  ]
+
 }
