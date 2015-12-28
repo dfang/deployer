@@ -9,3 +9,6 @@ cookbook 'openswan', '~> 0.3.2'
 cookbook 'ssh-keys'
 # cookbook 'ssh-keys', '~> 1.2.7'
 # cookbook 'ssh_authorized_keys', '~> 0.3.0'
+
+
+cookbook 'golang', '~> 1.7.0'
