@@ -1,7 +1,14 @@
 {
-  "local_port": 1081,
-  "server_password": [
-    ["127.0.0.1:8387", "foobar"],
-    ["127.0.0.1:8388", "barfoo", "aes-128-cfb"]
-  ]
+  "port_password": {
+    "8388": "pa$$w0rd",
+    "8787": "pa$$w0rd",
+    "8888": "pa$$w0rd",
+    "8989": "pa$$w0rd",
+    "9001": "pa$$w0rd",
+    "9002": "pa$$w0rd",
+    "9003": "pa$$w0rd",
+    "9004": "pa$$w0rd"
+  },
+  "method": "aes-128-cfb",
+  "timeout": 600
 }
