@@ -42,3 +42,12 @@ knife zero bootstrap 192.241.204.188 -x root -N 'df.sf' -V -z
 knife node run_list add df.sf 'role[l2tp], role[pptpd], role[shadowsocks]'
 knife zero converge "name:*.sf" -x root -a knife_zero.host
 knife ssh 'name:df.sf' -a knife_zero.host -x root 'apt-get install -y mosh'
+
+
+
+
+https://github.com/higanworks/knife-zero/issues/21
+https://github.com/higanworks/knife-zero/issues/45
+since knife zero does not integrate with berkshelf like knife solo,
+before you run knife zero, you need to run `berks vendor cookbooks` if you make changes on cookbooks in site-cookbooks
+otherwise knife converge will raise "Error Resolving Cookbooks for Run List"

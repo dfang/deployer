@@ -7,6 +7,8 @@ DEPENDENCIES
   openssl
   openswan (~> 0.3.2)
   pptpd
+  shadowsocks-go
+    path: site-cookbooks/shadowsocks-go
   ssh-keys
   transmission
     path: site-cookbooks/transmission
@@ -37,6 +39,8 @@ GRAPH
   openswan (0.3.2)
     ipaddr_extensions (>= 0.3.0)
   pptpd (1.0.1)
+  shadowsocks-go (0.1.0)
+    golang (>= 0.0.0)
   ssh-keys (1.2.7)
   transmission (2.0.10)
     build-essential (>= 0.0.0)

@@ -89,9 +89,9 @@ template "#{config['config_file']}" do
   variables(:config => config)
 end
 
-template "/etc/init/btsync.conf" do
-  source "upstart-conf.erb"
-  mode "0644"
+template "/etc/init.d/btsync" do
+  source "btsync.erb"
+  mode "0755"
   variables(
     :config     => config,
     :executable => node["btsync"]["bin_dir"] + "/btsync")
@@ -100,11 +100,6 @@ end
 
 service "btsync" do
   service_name "btsync"
-  provider Chef::Provider::Service::Upstart
-  start_command   "/sbin/start btsync"
-  stop_command    "/sbin/stop btsync"
-  status_command  "/sbin/status btsync"
-  restart_command "/sbin/restart btsync || /sbin/start btsync"
   supports [:start, :stop, :status, :restart]
-  action :enable
+  action :restart
 end

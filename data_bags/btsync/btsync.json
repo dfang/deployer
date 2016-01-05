@@ -1,3 +1,15 @@
 {
-  "id": "btsync"
+  "id": "btsync",
+  "device_name": "My Sync Device",
+  "listening_port": 0, // 0 表示随机端口
+  "disk_low_priority": true, // 设置在磁盘上操作文件的优先级，如果设置为false，在同步文件时读写文件将会采用最高速度和优先级，不过这样会影响其他应用的性能。
+  "lan_encrypt_data": true, // 如果设置为ture，则在本地网络传输时会采用加密传输。
+  "lan_use_tcp": false, // 如果设置为ture，在本地网络同步会采用tcp传输，而不是采用udp传输。注意：在LAN中禁止加密并采用tcp传输，会增加传输速度。
+  "storage_path" : "/home/user/.sync", // storage_path包含一些运行时产生的状态文件，如果没有定义，则会在二进制命令运行的目录下产生一个.sync隐藏目录
+  "pid_file" : "/var/run/btsync.pid", // 定义pid文件的路径
+  "log_file" : "/var/log/btsync.log", // 定义pid文件的路径
+  "check_for_updates" : true, // 是否检查文件更新
+
+
+
 }
