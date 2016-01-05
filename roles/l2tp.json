@@ -1,0 +1,30 @@
+{
+  "name": "l2tp",
+  "description": "setup l2tp server",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "l2tp-ipsec":{
+      "users": [
+        {
+          "username": "will",
+          "vpn_password": "smith"
+        },
+        {
+          "username": "john",
+          "vpn_password": "1986kb23"
+        }
+      ],
+      "preshared_key": "860513"
+    }
+  },
+  "override_attributes": {
+
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[l2tp-ipsec]"
+  ],
+  "env_run_lists": {
+
+  }
+}

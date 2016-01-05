@@ -15,3 +15,9 @@ cookbook 'ssh-keys'
 
 cookbook 'golang', '~> 1.7.0'
 # cookbook 'shadowsocks-go', path: 'site-cookbooks/shadowsocks-go'
+
+
+cookbook 'openssl' # transmission depends openssl to generate secure_password
+
+cookbook 'transmission', path: 'site-cookbooks/transmission'
+cookbook 'btsync', path: 'site-cookbooks/btsync'

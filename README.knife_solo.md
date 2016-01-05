@@ -16,3 +16,5 @@ install and configure a pptp vpn server on a ubuntu server (12.04 or 14.04)
 
 6. now you can connect to your server if configue your vpn correctly on your mac.
    username and password is in ip.json and the vpn type is pptp
+
+

@@ -1,0 +1,24 @@
+{
+  "name": "btsync",
+  "description": "install and configure btsync web ui",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "btsync":{
+      "webui": {
+        "enabled": true,
+        "login": "btsync",
+        "password": "password"
+      }
+    }
+  },
+  "override_attributes": {
+
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[btsync]"
+  ],
+  "env_run_lists": {
+
+  }
+}

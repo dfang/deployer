@@ -1,19 +1,18 @@
 {
-  "name": "pptpd",
-  "description": "pptpd",
+  "name": "vpn",
+  "description": "install pptp, l2tp, and shadowsocks",
   "json_class": "Chef::Role",
   "default_attributes": {
-    "pptpd": {
-      "username": "john",
-      "password": "1986kb23"
-    }
+
   },
   "override_attributes": {
 
   },
   "chef_type": "role",
   "run_list": [
-    "recipe[pptpd]"
+    "role[pptpd]",
+    "role[l2tp]",
+    "role[shadowsocks]"
   ],
   "env_run_lists": {
 

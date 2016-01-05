@@ -1,0 +1,22 @@
+{
+  "name": "transmission",
+  "description": "install and configure transmission",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "transmission":{
+      "download_dir": "/mnt/transmission",
+      "rpc_username": "transmission",
+      "rpc_password": "password"
+    }
+  },
+  "override_attributes": {
+
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[transmission]"
+  ],
+  "env_run_lists": {
+
+  }
+}

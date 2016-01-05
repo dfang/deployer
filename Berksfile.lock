@@ -1,13 +1,19 @@
 DEPENDENCIES
+  btsync
+    path: site-cookbooks/btsync
   firewall-ex (~> 0.1.1)
   golang (~> 1.7.0)
   l2tp-ipsec (~> 0.1.0)
+  openssl
   openswan (~> 0.3.2)
   pptpd
   ssh-keys
+  transmission
+    path: site-cookbooks/transmission
 
 GRAPH
   apt (2.9.2)
+  btsync (0.1.1)
   build-essential (2.2.4)
   chef-sugar (3.1.1)
   dpkg_autostart (0.2.0)
@@ -26,10 +32,15 @@ GRAPH
     dpkg_autostart (>= 0.0.0)
     ubuntu (>= 0.0.0)
     yum-epel (>= 0.0.0)
+  openssl (4.4.0)
+    chef-sugar (>= 3.1.1)
   openswan (0.3.2)
     ipaddr_extensions (>= 0.3.0)
   pptpd (1.0.1)
   ssh-keys (1.2.7)
+  transmission (2.0.10)
+    build-essential (>= 0.0.0)
+    openssl (>= 0.0.0)
   ubuntu (1.2.0)
     apt (>= 0.0.0)
   yum (3.8.2)
