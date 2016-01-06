@@ -179,15 +179,15 @@
         "interfaces": {
           "lo": {
             "rx": {
-              "bytes": "5656904",
-              "packets": "9286",
+              "bytes": "5995521",
+              "packets": "9604",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
             },
             "tx": {
-              "bytes": "5656904",
-              "packets": "9286",
+              "bytes": "5995521",
+              "packets": "9604",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
@@ -197,16 +197,16 @@
           "eth0": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "41575072445",
-              "packets": "28906728",
+              "bytes": "41577291930",
+              "packets": "28915412",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "3266013726",
-              "packets": "19034229",
+              "bytes": "3267491378",
+              "packets": "19042895",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -744,8 +744,8 @@
     "filesystem": {
       "/dev/vda1": {
         "kb_size": "30830588",
-        "kb_used": "4058448",
-        "kb_available": "25183004",
+        "kb_used": "4058464",
+        "kb_available": "25182988",
         "percent_used": "14%",
         "mount": "/",
         "total_inodes": "1966080",
@@ -878,23 +878,23 @@
         "free": "0kB"
       },
       "total": "1017860kB",
-      "free": "113336kB",
-      "buffers": "99996kB",
-      "cached": "606024kB",
-      "active": "456456kB",
-      "inactive": "385020kB",
-      "dirty": "48kB",
+      "free": "110392kB",
+      "buffers": "100248kB",
+      "cached": "608412kB",
+      "active": "456552kB",
+      "inactive": "387644kB",
+      "dirty": "52kB",
       "writeback": "0kB",
-      "anon_pages": "135444kB",
+      "anon_pages": "135528kB",
       "mapped": "13660kB",
-      "slab": "34732kB",
-      "slab_reclaimable": "24564kB",
-      "slab_unreclaim": "10168kB",
-      "page_tables": "3552kB",
+      "slab": "35068kB",
+      "slab_reclaimable": "24976kB",
+      "slab_unreclaim": "10092kB",
+      "page_tables": "3560kB",
       "nfs_unstable": "0kB",
       "bounce": "0kB",
       "commit_limit": "508928kB",
-      "committed_as": "254448kB",
+      "committed_as": "254428kB",
       "vmalloc_total": "34359738367kB",
       "vmalloc_used": "14564kB",
       "vmalloc_chunk": "34359717756kB"
@@ -1658,12 +1658,12 @@
     "machinename": "ubuntu-1gb-sfo1-01",
     "fqdn": "ubuntu-1gb-sfo1-01",
     "domain": null,
-    "uptime_seconds": 533924,
-    "uptime": "6 days 04 hours 18 minutes 44 seconds",
-    "idletime_seconds": 531802,
-    "idletime": "6 days 03 hours 43 minutes 22 seconds",
+    "uptime_seconds": 537716,
+    "uptime": "6 days 05 hours 21 minutes 56 seconds",
+    "idletime_seconds": 535578,
+    "idletime": "6 days 04 hours 46 minutes 18 seconds",
     "root_group": "root",
-    "ohai_time": 1452022638.4421346,
+    "ohai_time": 1452026430.0487463,
     "block_device": {
       "vda": {
         "size": "62914560",
@@ -1796,8 +1796,8 @@
       "by_device": {
         "/dev/vda1": {
           "kb_size": "30830588",
-          "kb_used": "4058448",
-          "kb_available": "25183004",
+          "kb_used": "4058464",
+          "kb_available": "25182988",
           "percent_used": "14%",
           "total_inodes": "1966080",
           "inodes_used": "125465",
@@ -1956,8 +1956,8 @@
       "by_mountpoint": {
         "/": {
           "kb_size": "30830588",
-          "kb_used": "4058448",
-          "kb_available": "25183004",
+          "kb_used": "4058464",
+          "kb_available": "25182988",
           "percent_used": "14%",
           "total_inodes": "1966080",
           "inodes_used": "125465",
@@ -2188,8 +2188,8 @@
         "/dev/vda1,/": {
           "device": "/dev/vda1",
           "kb_size": "30830588",
-          "kb_used": "4058448",
-          "kb_available": "25183004",
+          "kb_used": "4058464",
+          "kb_available": "25182988",
           "percent_used": "14%",
           "mount": "/",
           "total_inodes": "1966080",

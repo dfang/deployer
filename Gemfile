@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'berkshelf'
-gem 'knife-solo'
+gem 'chef', '~> 12.6.0'
+gem 'knife-zero', '~> 1.12.0'
+gem 'berkshelf', '~> 4.0'
 
-# Uncomment these lines if you want to live on the Edge:
-#
+
+# gem 'knife-solo'
 # group :development do
 #   gem "berkshelf", github: "berkshelf/berkshelf"
 #   gem "vagrant", github: "mitchellh/vagrant", tag: "v1.6.3"

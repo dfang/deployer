@@ -46,6 +46,7 @@ knife ssh 'name:df.sf' -a knife_zero.host -x root 'apt-get install -y mosh'
 
 
 
+https://github.com/higanworks/knife-zero/issues/19
 https://github.com/higanworks/knife-zero/issues/21
 https://github.com/higanworks/knife-zero/issues/45
 since knife zero does not integrate with berkshelf like knife solo,

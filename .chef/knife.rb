@@ -10,3 +10,10 @@ knife[:berkshelf_path] = ["cookbooks", "site-cookbooks"]
 knife[:editor] = "sb"
 
 local_mode true
+
+coobook_path [
+  File.expand_path('../../cookbooks', __FILE__)
+]
+
+knife[:before_bootstrap] = "berks vendor cookbooks"
+knife[:before_converge]  = "berks vendor cookbooks"
