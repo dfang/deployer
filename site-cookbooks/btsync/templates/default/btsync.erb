@@ -16,7 +16,7 @@ NAME="btsync"
 PATH="/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin"
 APPDIR="/usr/local/bin/"
 APPBIN="/usr/local/bin/"
-APPARGS="--nodaemon --log <%= @config['log_file'] %> --config <%= @config['config_file'] %>"
+APPARGS="--nodaemon --log <%= node['btsync']['log_file'] %> --config <%= node['btsync']['config_file'] %>"
 USER="root"
 GROUP="root"
 

@@ -8,7 +8,7 @@
   "storage_path" : "/home/user/.sync", // storage_path包含一些运行时产生的状态文件，如果没有定义，则会在二进制命令运行的目录下产生一个.sync隐藏目录
   "pid_file" : "/var/run/btsync.pid", // 定义pid文件的路径
   "log_file" : "/var/log/btsync.log", // 定义pid文件的路径
-  "check_for_updates" : true, // 是否检查文件更新
+  "check_for_updates" : true // 是否检查文件更新
 
 
 

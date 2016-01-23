@@ -7,6 +7,7 @@ default["btsync"]["user"]    = "root"
 default["btsync"]["storage_path"] = ".btsync"
 default["btsync"]["pid_file"]     = ".btsync/sync.pid"
 default["btsync"]["config_file"]  = ".btsync/config.json"
+default["btsync"]["log_file"]  = "/var/log/btsync.log"
 
 default["btsync"]["device_name"]       = Chef::Config[:node_name]
 default["btsync"]["listening_port"]    = "0" # "0" means random port

@@ -15,6 +15,7 @@ USER=<%= node['transmission']['user'] %>
 #PIDFILE=/var/run/$NAME.pid
 STOP_TIMEOUT=3
 
+
 export PATH="${PATH:+$PATH:}/sbin:/usr/local/bin"
 
 [ -x $DAEMON ] || exit 0

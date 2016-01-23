@@ -8,7 +8,7 @@
 // "storage_path" : "/home/user/.sync",
 
 /* set location of pid file */
-// "pid_file" : "/var/run/btsync.pid",
+  "pid_file" : "/var/run/btsync.pid",
 
   /* use UPnP for port mapping */
   "use_upnp": <%= @config["use_upnp"] %>,
@@ -65,8 +65,8 @@
 
 /* !!! if you set shared folders in config file WebUI will be DISABLED !!!
    shared directories specified in config file  override the folders previously added from WebUI. */
-,
-  "shared_folders" :
+/*
+  , "shared_folders" :
   [
     {
       "secret" : "MY_SECRET_1", // required field - use --generate-secret in command line to create new secret
@@ -82,6 +82,7 @@
       ]
     }
   ]
+*/
 
 /* Advanced preferences can be added to config file. Info is available at "http://help.getsync.com/customer/portal/articles/1902048-sync-advanced-preferences--more-options"
 For example see folder_rescan_interval below */

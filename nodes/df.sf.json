@@ -6,7 +6,10 @@
     },
     "tags": [
 
-    ]
+    ],
+    "transmission": {
+      "rpc_password": "Wpe78LQFoMwzv8tYfIHT"
+    }
   },
   "default": {
     "l2tp-ipsec": {
@@ -60,6 +63,97 @@
       "owner": "root",
       "group": "root",
       "mode": 493
+    },
+    "btsync": {
+      "bin_dir": "/usr/local/bin",
+      "user": "root",
+      "storage_path": ".btsync",
+      "pid_file": ".btsync/sync.pid",
+      "config_file": ".btsync/config.json",
+      "log_file": "/var/log/btsync.log",
+      "device_name": "df.sf",
+      "listening_port": "0",
+      "webui": {
+        "enabled": true,
+        "listen": "0.0.0.0:8888",
+        "login": "btsync",
+        "password": "password"
+      },
+      "use_upnp": "true",
+      "check_for_updates": "true",
+      "download_limit": "0",
+      "upload_limit": "0",
+      "disk_low_priority": "false",
+      "folder_rescan_interval": "600",
+      "lan_encrypt_data": "true",
+      "lan_use_tcp": "true",
+      "rate_limit_local_peers": "false",
+      "sync_max_time_diff": "300",
+      "sync_trash_ttl": "30",
+      "shared_folders": [
+
+      ],
+      "shared_folder_defaults": {
+        "use_relay_server": "true",
+        "use_tracker": "true",
+        "use_dht": "false",
+        "search_lan": "true",
+        "use_sync_trash": "false",
+        "known_hosts": [
+
+        ],
+        "sync_ignore": [
+          ".DS_Store",
+          ".DS_Store?",
+          ".AppleDouble",
+          "._*",
+          ".Spotlight-V100",
+          ".Trashes",
+          "ehthumbs.db",
+          "desktop.ini"
+        ]
+      },
+      "download_url": {
+        "32bit": "https://download-cdn.getsync.com/stable/linux-i386/BitTorrent-Sync_i386.tar.gz",
+        "64bit": "https://download-cdn.getsync.com/stable/linux-x64/BitTorrent-Sync_x64.tar.gz"
+      }
+    },
+    "build-essential": {
+      "compile_time": false
+    },
+    "openssl": {
+      "packages": [
+
+      ],
+      "restart_services": [
+
+      ]
+    },
+    "transmission": {
+      "install_method": "package",
+      "user": "debian-transmission",
+      "group": "debian-transmission",
+      "url": "http://download.transmissionbt.com/files",
+      "version": "2.03",
+      "checksum": "06802c6f4ba517341eb287b273145ccd5e7b0fba2a270da82f0eb0a683cf4046",
+      "peer_port": 51413,
+      "rpc_bind_address": "0.0.0.0",
+      "rpc_username": "transmission",
+      "rpc_port": 9091,
+      "rpc_whitelist_enabled": false,
+      "rpc_whitelist": "127.0.0.1",
+      "home": "/var/lib/transmission-daemon",
+      "config_dir": "/var/lib/transmission-daemon/info",
+      "download_dir": "/mnt/transmission",
+      "incomplete_dir": "/var/lib/transmission-daemon/incomplete",
+      "watch_dir": "/var/lib/transmission-daemon/watch",
+      "incomplete_dir_enabled": "false",
+      "watch_dir_enabled": "false",
+      "speed_limit_down": 100,
+      "speed_limit_down_enabled": "false",
+      "speed_limit_up": 100,
+      "speed_limit_up_enabled": "false",
+      "rpc_password": "password"
     }
   },
   "automatic": {
@@ -179,15 +273,15 @@
         "interfaces": {
           "lo": {
             "rx": {
-              "bytes": "5995521",
-              "packets": "9604",
+              "bytes": "9651340",
+              "packets": "13212",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
             },
             "tx": {
-              "bytes": "5995521",
-              "packets": "9604",
+              "bytes": "9651340",
+              "packets": "13212",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
@@ -197,16 +291,16 @@
           "eth0": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "41577291930",
-              "packets": "28915412",
+              "bytes": "41679581710",
+              "packets": "29285245",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "3267491378",
-              "packets": "19042895",
+              "bytes": "3338915582",
+              "packets": "19409643",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -744,14 +838,14 @@
     "filesystem": {
       "/dev/vda1": {
         "kb_size": "30830588",
-        "kb_used": "4058464",
-        "kb_available": "25182988",
-        "percent_used": "14%",
+        "kb_used": "3730504",
+        "kb_available": "25510948",
+        "percent_used": "13%",
         "mount": "/",
         "total_inodes": "1966080",
-        "inodes_used": "125465",
-        "inodes_available": "1840615",
-        "inodes_percent_used": "7%",
+        "inodes_used": "95915",
+        "inodes_available": "1870165",
+        "inodes_percent_used": "5%",
         "fs_type": "ext4",
         "mount_options": [
           "rw",
@@ -793,13 +887,13 @@
       },
       "tmpfs": {
         "kb_size": "101788",
-        "kb_used": "372",
-        "kb_available": "101416",
+        "kb_used": "376",
+        "kb_available": "101412",
         "percent_used": "1%",
         "mount": "/run",
         "total_inodes": "127232",
-        "inodes_used": "327",
-        "inodes_available": "126905",
+        "inodes_used": "329",
+        "inodes_available": "126903",
         "inodes_percent_used": "1%",
         "fs_type": "tmpfs",
         "mount_options": [
@@ -878,25 +972,25 @@
         "free": "0kB"
       },
       "total": "1017860kB",
-      "free": "110392kB",
-      "buffers": "100248kB",
-      "cached": "608412kB",
-      "active": "456552kB",
-      "inactive": "387644kB",
+      "free": "150104kB",
+      "buffers": "101068kB",
+      "cached": "541796kB",
+      "active": "482804kB",
+      "inactive": "300592kB",
       "dirty": "52kB",
       "writeback": "0kB",
-      "anon_pages": "135528kB",
-      "mapped": "13660kB",
-      "slab": "35068kB",
-      "slab_reclaimable": "24976kB",
-      "slab_unreclaim": "10092kB",
-      "page_tables": "3560kB",
+      "anon_pages": "140564kB",
+      "mapped": "13788kB",
+      "slab": "55332kB",
+      "slab_reclaimable": "45076kB",
+      "slab_unreclaim": "10256kB",
+      "page_tables": "4120kB",
       "nfs_unstable": "0kB",
       "bounce": "0kB",
       "commit_limit": "508928kB",
-      "committed_as": "254428kB",
+      "committed_as": "287280kB",
       "vmalloc_total": "34359738367kB",
-      "vmalloc_used": "14564kB",
+      "vmalloc_used": "14596kB",
       "vmalloc_chunk": "34359717756kB"
     },
     "cpu": {
@@ -1658,12 +1752,12 @@
     "machinename": "ubuntu-1gb-sfo1-01",
     "fqdn": "ubuntu-1gb-sfo1-01",
     "domain": null,
-    "uptime_seconds": 537716,
-    "uptime": "6 days 05 hours 21 minutes 56 seconds",
-    "idletime_seconds": 535578,
-    "idletime": "6 days 04 hours 46 minutes 18 seconds",
+    "uptime_seconds": 637867,
+    "uptime": "7 days 09 hours 11 minutes 07 seconds",
+    "idletime_seconds": 635456,
+    "idletime": "7 days 08 hours 30 minutes 56 seconds",
     "root_group": "root",
-    "ohai_time": 1452026430.0487463,
+    "ohai_time": 1452126581.1136515,
     "block_device": {
       "vda": {
         "size": "62914560",
@@ -1796,13 +1890,13 @@
       "by_device": {
         "/dev/vda1": {
           "kb_size": "30830588",
-          "kb_used": "4058464",
-          "kb_available": "25182988",
-          "percent_used": "14%",
+          "kb_used": "3730504",
+          "kb_available": "25510948",
+          "percent_used": "13%",
           "total_inodes": "1966080",
-          "inodes_used": "125465",
-          "inodes_available": "1840615",
-          "inodes_percent_used": "7%",
+          "inodes_used": "95915",
+          "inodes_available": "1870165",
+          "inodes_percent_used": "5%",
           "fs_type": "ext4",
           "mount_options": [
             "rw",
@@ -1858,12 +1952,12 @@
         },
         "tmpfs": {
           "kb_size": "101788",
-          "kb_used": "372",
-          "kb_available": "101416",
+          "kb_used": "376",
+          "kb_available": "101412",
           "percent_used": "1%",
           "total_inodes": "127232",
-          "inodes_used": "327",
-          "inodes_available": "126905",
+          "inodes_used": "329",
+          "inodes_available": "126903",
           "inodes_percent_used": "1%",
           "fs_type": "tmpfs",
           "mount_options": [
@@ -1956,13 +2050,13 @@
       "by_mountpoint": {
         "/": {
           "kb_size": "30830588",
-          "kb_used": "4058464",
-          "kb_available": "25182988",
-          "percent_used": "14%",
+          "kb_used": "3730504",
+          "kb_available": "25510948",
+          "percent_used": "13%",
           "total_inodes": "1966080",
-          "inodes_used": "125465",
-          "inodes_available": "1840615",
-          "inodes_percent_used": "7%",
+          "inodes_used": "95915",
+          "inodes_available": "1870165",
+          "inodes_percent_used": "5%",
           "fs_type": "ext4",
           "mount_options": [
             "rw",
@@ -2015,12 +2109,12 @@
         },
         "/run": {
           "kb_size": "101788",
-          "kb_used": "372",
-          "kb_available": "101416",
+          "kb_used": "376",
+          "kb_available": "101412",
           "percent_used": "1%",
           "total_inodes": "127232",
-          "inodes_used": "327",
-          "inodes_available": "126905",
+          "inodes_used": "329",
+          "inodes_available": "126903",
           "inodes_percent_used": "1%",
           "fs_type": "tmpfs",
           "mount_options": [
@@ -2188,14 +2282,14 @@
         "/dev/vda1,/": {
           "device": "/dev/vda1",
           "kb_size": "30830588",
-          "kb_used": "4058464",
-          "kb_available": "25182988",
-          "percent_used": "14%",
+          "kb_used": "3730504",
+          "kb_available": "25510948",
+          "percent_used": "13%",
           "mount": "/",
           "total_inodes": "1966080",
-          "inodes_used": "125465",
-          "inodes_available": "1840615",
-          "inodes_percent_used": "7%",
+          "inodes_used": "95915",
+          "inodes_available": "1870165",
+          "inodes_percent_used": "5%",
           "fs_type": "ext4",
           "mount_options": [
             "rw",
@@ -2240,13 +2334,13 @@
         "tmpfs,/run": {
           "device": "tmpfs",
           "kb_size": "101788",
-          "kb_used": "372",
-          "kb_available": "101416",
+          "kb_used": "376",
+          "kb_available": "101412",
           "percent_used": "1%",
           "mount": "/run",
           "total_inodes": "127232",
-          "inodes_used": "327",
-          "inodes_available": "126905",
+          "inodes_used": "329",
+          "inodes_available": "126903",
           "inodes_percent_used": "1%",
           "fs_type": "tmpfs",
           "mount_options": [
@@ -2426,19 +2520,30 @@
       "pptpd::default",
       "shadowsocks-go",
       "shadowsocks-go::default",
+      "btsync",
+      "btsync::default",
+      "transmission",
+      "transmission::default",
       "l2tp-ipsec::install",
-      "golang::default"
+      "golang::default",
+      "btsync::install",
+      "btsync::configure",
+      "transmission::package"
     ],
     "expanded_run_list": [
       "l2tp-ipsec::default",
       "pptpd::default",
-      "shadowsocks-go::default"
+      "shadowsocks-go::default",
+      "btsync::default",
+      "transmission::default"
     ],
     "roles": [
       "l2tp",
       "pptpd",
       "shadowsocks",
-      "vpn"
+      "vpn",
+      "btsync",
+      "transmission"
     ],
     "cookbooks": {
       "l2tp-ipsec": {
@@ -2450,8 +2555,23 @@
       "shadowsocks-go": {
         "version": "0.1.0"
       },
+      "btsync": {
+        "version": "0.1.1"
+      },
+      "transmission": {
+        "version": "2.0.10"
+      },
       "golang": {
         "version": "1.7.0"
+      },
+      "openssl": {
+        "version": "4.4.0"
+      },
+      "build-essential": {
+        "version": "2.2.4"
+      },
+      "chef-sugar": {
+        "version": "3.1.1"
       }
     }
   },
@@ -2459,6 +2579,8 @@
     "role[l2tp]",
     "role[pptpd]",
     "role[shadowsocks]",
-    "role[vpn]"
+    "role[vpn]",
+    "role[btsync]",
+    "role[transmission]"
   ]
 }
