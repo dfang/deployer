@@ -1,14 +1,24 @@
 {
-  "name": "df.sf",
+  "name": "vagrant",
   "normal": {
     "knife_zero": {
-      "host": "127.0.0.1"
+      "host": "127.0.0.1",
+      "port": 2222
     },
     "tags": [
 
-    ],
-    "transmission": {
-      "rpc_password": "password"
+    ]
+  },
+  "default": {
+    "ssh_authorized_keys": {
+      "keytypes": [
+        "ecdsa-sha2-nistp256",
+        "ecdsa-sha2-nistp384",
+        "ecdsa-sha2-nistp521",
+        "ssh-ed25519",
+        "ssh-dss",
+        "ssh-rsa"
+      ]
     }
   },
   "automatic": {
@@ -56,21 +66,25 @@
           "size": "13844",
           "refcount": "1"
         },
-        "video": {
-          "size": "19596",
-          "refcount": "0"
-        },
         "psmouse": {
           "size": "87603",
           "refcount": "0"
         },
-        "serio_raw": {
-          "size": "13211",
+        "mac_hid": {
+          "size": "13253",
+          "refcount": "0"
+        },
+        "video": {
+          "size": "19596",
           "refcount": "0"
         },
         "nfsd": {
           "size": "277809",
           "refcount": "2"
+        },
+        "serio_raw": {
+          "size": "13211",
+          "refcount": "0"
         },
         "nfs": {
           "size": "356273",
@@ -100,17 +114,13 @@
           "size": "73795",
           "refcount": "1"
         },
-        "i2c_piix4": {
-          "size": "13301",
-          "refcount": "0"
-        },
-        "mac_hid": {
-          "size": "13253",
-          "refcount": "0"
-        },
         "vboxguest": {
           "size": "231236",
           "refcount": "2"
+        },
+        "i2c_piix4": {
+          "size": "13301",
+          "refcount": "0"
         },
         "lp": {
           "size": "17799",
@@ -184,8 +194,8 @@
           },
           "state": "up",
           "arp": {
-            "10.0.2.2": "52:54:00:12:35:02",
-            "10.0.2.3": "52:54:00:12:35:03"
+            "10.0.2.3": "52:54:00:12:35:03",
+            "10.0.2.2": "52:54:00:12:35:02"
           },
           "routes": [
             {
@@ -223,15 +233,15 @@
         "interfaces": {
           "lo": {
             "rx": {
-              "bytes": "125652",
-              "packets": "95",
+              "bytes": "71384",
+              "packets": "88",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
             },
             "tx": {
-              "bytes": "125652",
-              "packets": "95",
+              "bytes": "71384",
+              "packets": "88",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
@@ -241,16 +251,16 @@
           "eth0": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "57111",
-              "packets": "270",
+              "bytes": "38077",
+              "packets": "240",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "140684",
-              "packets": "407",
+              "bytes": "83695",
+              "packets": "334",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -274,7 +284,7 @@
     "platform": "ubuntu",
     "platform_version": "12.04",
     "platform_family": "debian",
-    "ohai_time": 1453745221.5917804,
+    "ohai_time": 1453747150.7749164,
     "dmi": {
       "dmidecode_version": "2.11",
       "smbios_version": "2.5",
@@ -1126,36 +1136,36 @@
         "free": "786428kB"
       },
       "total": "374256kB",
-      "free": "165524kB",
-      "buffers": "23500kB",
-      "cached": "79172kB",
-      "active": "105064kB",
-      "inactive": "65124kB",
-      "dirty": "76kB",
+      "free": "165576kB",
+      "buffers": "23468kB",
+      "cached": "79264kB",
+      "active": "104520kB",
+      "inactive": "65596kB",
+      "dirty": "12kB",
       "writeback": "0kB",
-      "anon_pages": "67500kB",
-      "mapped": "16296kB",
-      "slab": "24220kB",
-      "slab_reclaimable": "13552kB",
-      "slab_unreclaim": "10668kB",
-      "page_tables": "3236kB",
+      "anon_pages": "67324kB",
+      "mapped": "16204kB",
+      "slab": "24256kB",
+      "slab_reclaimable": "13520kB",
+      "slab_unreclaim": "10736kB",
+      "page_tables": "3260kB",
       "nfs_unstable": "0kB",
       "bounce": "0kB",
       "commit_limit": "973556kB",
-      "committed_as": "169276kB",
+      "committed_as": "168708kB",
       "vmalloc_total": "34359738367kB",
       "vmalloc_used": "9136kB",
-      "vmalloc_chunk": "34359725372kB"
+      "vmalloc_chunk": "34359725884kB"
     },
-    "uptime_seconds": 107,
-    "uptime": "1 minutes 47 seconds",
-    "idletime_seconds": 208,
-    "idletime": "3 minutes 28 seconds",
+    "uptime_seconds": 127,
+    "uptime": "2 minutes 07 seconds",
+    "idletime_seconds": 247,
+    "idletime": "4 minutes 07 seconds",
     "filesystem": {
       "/dev/mapper/precise64-root": {
         "kb_size": "82711212",
-        "kb_used": "4120948",
-        "kb_available": "74447980",
+        "kb_used": "4121196",
+        "kb_available": "74447732",
         "percent_used": "6%",
         "mount": "/",
         "fs_type": "ext4",
@@ -1219,9 +1229,9 @@
       },
       "vagrant": {
         "kb_size": "414815232",
-        "kb_used": "385143496",
-        "kb_available": "29671736",
-        "percent_used": "93%",
+        "kb_used": "386507420",
+        "kb_available": "28307812",
+        "percent_used": "94%",
         "mount": "/vagrant",
         "fs_type": "vboxsf",
         "mount_options": [
@@ -1291,7 +1301,7 @@
         "model": "70",
         "model_name": "Intel(R) Core(TM) i7-4850HQ CPU @ 2.30GHz",
         "stepping": "1",
-        "mhz": "2294.883",
+        "mhz": "2294.550",
         "cache_size": "6144 KB",
         "physical_id": "0",
         "core_id": "0",
@@ -1351,7 +1361,7 @@
         "model": "70",
         "model_name": "Intel(R) Core(TM) i7-4850HQ CPU @ 2.30GHz",
         "stepping": "1",
-        "mhz": "2294.883",
+        "mhz": "2294.550",
         "cache_size": "6144 KB",
         "physical_id": "0",
         "core_id": "1",
@@ -1409,10 +1419,14 @@
       "real": 1
     },
     "recipes": [
-
+      "custom",
+      "custom::default"
     ],
     "roles": [
 
     ]
-  }
+  },
+  "run_list": [
+    "recipe[custom]"
+  ]
 }

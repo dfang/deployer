@@ -8,14 +8,19 @@ cookbook 'l2tp-ipsec', '~> 0.1.0'
 cookbook 'openswan', '~> 0.3.2'
 cookbook 'firewall-ex', '~> 0.1.1'
 
-cookbook 'ssh-keys'
+# Creates "authorized_keys" in user "~/.ssh" directory from a data bag (encrypted data bag supported)
 # cookbook 'ssh-keys', '~> 1.2.7'
-# cookbook 'ssh_authorized_keys', '~> 0.3.0'
+# Creates SSH authorized keys files in user home directories.
+cookbook 'ssh_authorized_keys', '~> 0.3.0'
+# Creates OS users from databags
+# cookbook 'users'
+
+# protects server with sshguard(alts: fail2ban, logcheck), sshguard protects hosts from brute-force attacks against SSH and other services ....
+cookbook 'sshguard', '~> 1.0.0'
 
 
 cookbook 'golang', '~> 1.7.0'
 cookbook 'shadowsocks-go', path: 'site-cookbooks/shadowsocks-go'
-
 
 cookbook 'openssl' # transmission depends openssl to generate secure_password
 

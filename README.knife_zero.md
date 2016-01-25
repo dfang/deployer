@@ -52,3 +52,8 @@ https://github.com/higanworks/knife-zero/issues/45
 since knife zero does not integrate with berkshelf like knife solo,
 before you run knife zero, you need to run `berks vendor cookbooks` if you make changes on cookbooks in site-cookbooks
 otherwise knife converge will raise "Error Resolving Cookbooks for Run List"
+
+
+links:
+
+[Knife zero](https://knife-zero.github.io/) 

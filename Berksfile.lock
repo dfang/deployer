@@ -9,7 +9,8 @@ DEPENDENCIES
   pptpd
   shadowsocks-go
     path: site-cookbooks/shadowsocks-go
-  ssh-keys
+  ssh_authorized_keys (~> 0.3.0)
+  sshguard (~> 1.0.0)
   transmission
     path: site-cookbooks/transmission
 
@@ -18,6 +19,7 @@ GRAPH
   btsync (0.1.1)
   build-essential (2.2.4)
   chef-sugar (3.1.1)
+  compat_resource (12.5.26)
   dpkg_autostart (0.2.0)
   firewall (2.2.0)
     chef-sugar (>= 0.0.0)
@@ -25,6 +27,8 @@ GRAPH
     firewall (>= 0.0.0)
   golang (1.7.0)
   ipaddr_extensions (0.3.1)
+  iptables (2.0.2)
+    compat_resource (>= 0.0.0)
   l2tp-ipsec (0.1.0)
     firewall-ex (>= 0.0.0)
     monit-ng (>= 0.0.0)
@@ -41,7 +45,9 @@ GRAPH
   pptpd (1.0.1)
   shadowsocks-go (0.1.0)
     golang (>= 0.0.0)
-  ssh-keys (1.2.7)
+  ssh_authorized_keys (0.3.0)
+  sshguard (1.0.0)
+    iptables (>= 0.0.0)
   transmission (2.0.10)
     build-essential (>= 0.0.0)
     openssl (>= 0.0.0)
