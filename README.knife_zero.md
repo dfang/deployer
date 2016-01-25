@@ -56,4 +56,4 @@ otherwise knife converge will raise "Error Resolving Cookbooks for Run List"
 
 links:
 
-[Knife zero](https://knife-zero.github.io/) 
+[Knife zero](https://knife-zero.github.io/)

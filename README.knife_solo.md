@@ -1,9 +1,9 @@
-deploy_vpn
+deployer
 ==========
 
-install and configure a pptp vpn server on a ubuntu server (12.04 or 14.04)
+install and configure vpn, shadowsocks, btsync, transmission, etc
 
-1. upload your public key to your server
+1. upload your public key to your server 
  `ssh-copy-id root@ip`
 
 2. git clone this project, and bundle install
@@ -16,5 +16,3 @@ install and configure a pptp vpn server on a ubuntu server (12.04 or 14.04)
 
 6. now you can connect to your server if configue your vpn correctly on your mac.
    username and password is in ip.json and the vpn type is pptp
-
-
