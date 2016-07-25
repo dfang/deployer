@@ -1,0 +1,30 @@
+{
+  "name": "apt-sources-switch",
+  "version": "0.0.0",
+  "description": "switch apt sources in a ubuntu server",
+  "long_description": "Description\n===========\n\nConfig apt sources in a ubuntu server, especially useful in china.\n\n",
+  "maintainer": "dfang",
+  "maintainer_email": "df1228@gmail.com",
+  "license": "Apache 2.0",
+  "platforms": {
+    "ubuntu": ">= 0.0.0"
+  },
+  "dependencies": {
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  }
+}

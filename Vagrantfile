@@ -1,10 +1,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-# All Vagrant configuration is done below. The "2" in Vagrant.configure
-# configures the configuration version (we support older styles for
-# backwards compatibility). Please don't change it unless you know what
-# you're doing.
 Vagrant.configure(2) do |config|
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at
@@ -68,4 +64,19 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get update
   #   sudo apt-get install -y apache2
   # SHELL
+
+  config.vm.provision "chef_zero" do |chef|
+    # Specify the local paths where Chef data is stored
+    chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
+    chef.data_bags_path = "data_bags"
+    chef.nodes_path = "nodes"
+    chef.roles_path = "roles"
+
+    # Add a recipe
+    chef.add_recipe "custom"
+
+    # Or maybe a role
+    # chef.add_role "web"
+  end
+
 end

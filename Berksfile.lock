@@ -1,30 +1,55 @@
 DEPENDENCIES
+  apt-sources-switch
+    path: site-cookbooks/apt-sources-switch
   btsync
     path: site-cookbooks/btsync
+  custom
+    path: site-cookbooks/custom
+  database
   firewall-ex (~> 0.1.1)
   golang (~> 1.7.0)
   l2tp-ipsec (~> 0.1.0)
+  nginx
   openssl
   openswan (~> 0.3.2)
   pptpd
+  rbenv
+  rbenv-install-rubies
   shadowsocks-go
     path: site-cookbooks/shadowsocks-go
   ssh_authorized_keys (~> 0.3.0)
   sshguard (~> 1.0.0)
+  sudo
   transmission
     path: site-cookbooks/transmission
+  utorrent-server
+    path: site-cookbooks/utorrent-server
 
 GRAPH
   apt (2.9.2)
+  apt-sources-switch (0.0.0)
+  bluepill (2.4.1)
+    rsyslog (~> 2.0)
   btsync (0.1.1)
   build-essential (2.2.4)
   chef-sugar (3.1.1)
+  chef_handler (1.2.0)
   compat_resource (12.5.26)
+  custom (0.1.0)
+    ssh_authorized_keys (>= 0.0.0)
+  database (4.0.9)
+    postgresql (>= 1.0.0)
+  dmg (2.3.0)
   dpkg_autostart (0.2.0)
   firewall (2.2.0)
     chef-sugar (>= 0.0.0)
   firewall-ex (0.1.1)
     firewall (>= 0.0.0)
+  git (4.3.6)
+    build-essential (>= 0.0.0)
+    dmg (>= 0.0.0)
+    windows (>= 0.0.0)
+    yum-epel (>= 0.0.0)
   golang (1.7.0)
   ipaddr_extensions (0.3.1)
   iptables (2.0.2)
@@ -38,21 +63,48 @@ GRAPH
     dpkg_autostart (>= 0.0.0)
     ubuntu (>= 0.0.0)
     yum-epel (>= 0.0.0)
+  nginx (2.7.6)
+    apt (~> 2.2)
+    bluepill (~> 2.3)
+    build-essential (~> 2.0)
+    ohai (~> 2.0)
+    runit (~> 1.2)
+    yum-epel (~> 0.3)
+  ohai (2.1.0)
   openssl (4.4.0)
     chef-sugar (>= 3.1.1)
   openswan (0.3.2)
     ipaddr_extensions (>= 0.3.0)
+  packagecloud (0.1.1)
+  postgresql (4.0.0)
+    apt (>= 1.9.0)
+    build-essential (>= 0.0.0)
+    openssl (~> 4.0)
   pptpd (1.0.1)
+  rbenv (1.7.1)
+    apt (>= 0.0.0)
+    build-essential (>= 0.0.0)
+    git (>= 0.0.0)
+    ohai (>= 1.1)
+  rbenv-install-rubies (0.2.1)
+    rbenv (>= 0.0.0)
+  rsyslog (2.2.0)
+  runit (1.7.6)
+    packagecloud (>= 0.0.0)
   shadowsocks-go (0.1.0)
     golang (>= 0.0.0)
   ssh_authorized_keys (0.3.0)
   sshguard (1.0.0)
     iptables (>= 0.0.0)
+  sudo (2.7.2)
   transmission (2.0.10)
     build-essential (>= 0.0.0)
     openssl (>= 0.0.0)
   ubuntu (1.2.0)
     apt (>= 0.0.0)
+  utorrent-server (0.1.0)
+  windows (1.39.1)
+    chef_handler (>= 0.0.0)
   yum (3.8.2)
   yum-epel (0.6.4)
     yum (~> 3.2)

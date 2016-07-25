@@ -1,0 +1,100 @@
+{
+  "name": "babycare",
+  "normal": {
+    "knife_zero": {
+      "host": "60.205.110.67"
+    },
+    "tags": [
+
+    ]
+  },
+  "default": {
+    "btsync": {
+      "bin_dir": "/usr/local/bin",
+      "user": "root",
+      "storage_path": ".btsync",
+      "pid_file": ".btsync/sync.pid",
+      "config_file": ".btsync/config.json",
+      "log_file": "/var/log/btsync.log",
+      "device_name": "babycare",
+      "listening_port": "0",
+      "webui": {
+        "enabled": false,
+        "listen": "0.0.0.0:8888",
+        "login": "admin",
+        "password": "password"
+      },
+      "use_upnp": "true",
+      "check_for_updates": "true",
+      "download_limit": "0",
+      "upload_limit": "0",
+      "disk_low_priority": "false",
+      "folder_rescan_interval": "600",
+      "lan_encrypt_data": "true",
+      "lan_use_tcp": "true",
+      "rate_limit_local_peers": "false",
+      "sync_max_time_diff": "300",
+      "sync_trash_ttl": "30",
+      "shared_folders": [
+
+      ],
+      "shared_folder_defaults": {
+        "use_relay_server": "true",
+        "use_tracker": "true",
+        "use_dht": "false",
+        "search_lan": "true",
+        "use_sync_trash": "false",
+        "known_hosts": [
+
+        ],
+        "sync_ignore": [
+          ".DS_Store",
+          ".DS_Store?",
+          ".AppleDouble",
+          "._*",
+          ".Spotlight-V100",
+          ".Trashes",
+          "ehthumbs.db",
+          "desktop.ini"
+        ]
+      },
+      "download_url": {
+        "32bit": "https://download-cdn.getsync.com/stable/linux-i386/BitTorrent-Sync_i386.tar.gz",
+        "64bit": "https://download-cdn.getsync.com/stable/linux-x64/BitTorrent-Sync_x64.tar.gz"
+      }
+    }
+  },
+  "automatic": {
+    "fqdn": "iZ25qpvxa65Z",
+    "os": "linux",
+    "os_version": "3.13.0-86-generic",
+    "hostname": "iZ25qpvxa65Z",
+    "ipaddress": "60.205.110.67",
+    "roles": [
+
+    ],
+    "recipes": [
+      "apt-sources-switch::default",
+      "btsync::default",
+      "btsync::install",
+      "btsync::configure"
+    ],
+    "platform": "ubuntu",
+    "platform_version": "14.04",
+    "cloud_v2": null,
+    "chef_packages": {
+      "ohai": {
+        "version": "8.17.1",
+        "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/ohai-8.17.1/lib/ohai"
+      },
+      "chef": {
+        "version": "12.12.15",
+        "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-12.12.15/lib"
+      }
+    }
+  },
+  "run_list": [
+    "recipe[apt-sources-switch::default]",
+    "recipe[btsync::default]"
+  ]
+}

@@ -24,5 +24,19 @@ cookbook 'shadowsocks-go', path: 'site-cookbooks/shadowsocks-go'
 
 cookbook 'openssl' # transmission depends openssl to generate secure_password
 
+cookbook 'utorrent-server', path: 'site-cookbooks/utorrent-server'
 cookbook 'transmission', path: 'site-cookbooks/transmission'
 cookbook 'btsync', path: 'site-cookbooks/btsync'
+
+
+
+
+cookbook 'rbenv'
+cookbook 'database'
+cookbook 'sudo'
+cookbook 'rbenv-install-rubies'
+cookbook 'nginx'
+
+cookbook 'apt-sources-switch', path: 'site-cookbooks/apt-sources-switch'
+cookbook 'custom', path: 'site-cookbooks/custom'
+

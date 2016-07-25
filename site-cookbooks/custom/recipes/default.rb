@@ -21,6 +21,10 @@ users.each do |name, ssh_key|
   end
 end
 
+execute "set locale" do
+  command "echo export LC_ALL=en_US.UTF-8 >> ~/.bash_profile"
+end
+
 execute "only allow key based logins" do
   command <<-EOF
     sed -n 'H;${x;s/\#PasswordAuthentication yes/PasswordAuthentication no/;p;}' /etc/ssh/sshd_config > tmp_sshd_config

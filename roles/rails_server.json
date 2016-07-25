@@ -1,0 +1,43 @@
+{
+  "name": "rails_server",
+  "description": "bootstrap a rails server",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "rbenv-install-rubies": {
+      "global_version": "2.0.0-p247"
+    },
+    "gems": ["bundler", "rbenv-rehash", "pry", {"rails": {"version": "4.0.2"}}],
+    "lib_packages": [ "libxml2-devel", "libxslt-devel", "libyaml-dev", "libpq-dev", "libmysqlclient-dev", "libsqlite3-dev", "sqlite3",
+                      "zlib1g-dev", "libssl-dev", "libcurl4-openssl-dev", "libpcre3-dev", "libreadline6", "libreadline6-dev",
+                      "build-essential", "openssl", "autoconf", "automake", "libtool", "curl", "git-core", "nodejs", "postgresql", "nginx", "vim"
+                    ],
+    "postgresql":{
+      "username":{
+        "postgres": "deployer"
+      },
+      "password":{
+        "postgres": "passw0rd123"
+      }
+    },
+    "authorization": {
+      "sudo": {
+        "groups": ["deployers"],
+        "users": ["deployer"],
+        "passwordless": "true"
+      }
+    }
+  },
+  "override_attributes": {
+
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[rbenv]",
+    "recipe[rbenv-install-rubies]",
+    "recipe[sudo]",
+    "recipe[custom]"
+  ],
+  "env_run_lists": {
+
+  }
+}

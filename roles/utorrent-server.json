@@ -1,0 +1,20 @@
+{
+  "name": "utorrent-server",
+  "description": "install and configure utorrent-server",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "utorrent-server":{
+     
+    }
+  },
+  "override_attributes": {
+
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[utorrent-server]"
+  ],
+  "env_run_lists": {
+
+  }
+}
