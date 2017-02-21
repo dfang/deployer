@@ -1,0 +1,384 @@
+{
+  "name": "qcloud",
+  "override": {
+    "rbenv_install_rubies": {
+      "global_version": "2.3.0",
+      "gems": [
+        "bundler",
+        "rbenv-rehash",
+        "pry",
+        {
+          "rails": {
+            "version": "4.2.0"
+          }
+        }
+      ],
+      "lib_packages": [
+        "nodejs",
+        "nginx",
+        "vim",
+        "postgresql",
+        "libpq-dev",
+        "libmysqlclient-dev",
+        "libsqlite3-dev",
+        "sqlite3"
+      ]
+    },
+    "postgresql": {
+      "username": {
+        "postgres": "deployer"
+      },
+      "password": {
+        "postgres": "dpGV7gVtyFWP4xSwtx04i1f26P1KduthSO4e4cSRSEU="
+      }
+    }
+  },
+  "normal": {
+    "knife_zero": {
+      "host": "118.89.114.211"
+    },
+    "tags": [
+
+    ],
+    "rbenv": {
+      "root": "/opt/rbenv"
+    },
+    "ruby_build": {
+      "prefix": "/opt/rbenv/plugins/ruby_build",
+      "bin_path": "/opt/rbenv/plugins/ruby_build/bin"
+    }
+  },
+  "default": {
+    "apt": {
+      "cacher-client": {
+        "restrict_environment": false
+      },
+      "cacher_dir": "/var/cache/apt-cacher-ng",
+      "cacher_interface": null,
+      "cacher_port": 3142,
+      "cacher_ssl_support": false,
+      "caching_server": false,
+      "compiletime": false,
+      "compile_time_update": false,
+      "key_proxy": "",
+      "cache_bypass": {
+
+      },
+      "periodic_update_min_delay": 86400,
+      "launchpad_api_version": "1.0",
+      "unattended_upgrades": {
+        "enable": false,
+        "update_package_lists": true,
+        "allowed_origins": [
+          "Ubuntu trusty"
+        ],
+        "package_blacklist": [
+
+        ],
+        "auto_fix_interrupted_dpkg": false,
+        "minimal_steps": false,
+        "install_on_shutdown": false,
+        "mail": null,
+        "mail_only_on_error": true,
+        "remove_unused_dependencies": false,
+        "automatic_reboot": false,
+        "automatic_reboot_time": "now",
+        "dl_limit": null
+      },
+      "confd": {
+        "install_recommends": true,
+        "install_suggests": false
+      }
+    },
+    "build-essential": {
+      "compile_time": false
+    },
+    "dmg": {
+      "base_dir": "/Applications",
+      "cache_dir": "/var/chef/cache"
+    },
+    "chef_handler": {
+      "root_user": "root",
+      "root_group": "root",
+      "handler_path": "/var/chef/handlers"
+    },
+    "windows": {
+      "allow_pending_reboots": true,
+      "allow_reboot_on_failure": false,
+      "rubyzipversion": null,
+      "reboot_timeout": 60
+    },
+    "yum": {
+      "main": {
+        "cachedir": "/var/cache/yum/$basearch/$releasever",
+        "distroverpkg": "ubuntu-release",
+        "alwaysprompt": null,
+        "assumeyes": null,
+        "bandwidth": null,
+        "bugtracker_url": null,
+        "clean_requirements_on_remove": null,
+        "color": null,
+        "color_list_available_downgrade": null,
+        "color_list_available_install": null,
+        "color_list_available_reinstall": null,
+        "color_list_available_upgrade": null,
+        "color_list_installed_extra": null,
+        "color_list_installed_newer": null,
+        "color_list_installed_older": null,
+        "color_list_installed_reinstall": null,
+        "color_search_match": null,
+        "color_update_installed": null,
+        "color_update_local": null,
+        "color_update_remote": null,
+        "commands": null,
+        "deltarpm": null,
+        "debuglevel": null,
+        "diskspacecheck": null,
+        "enable_group_conditionals": null,
+        "errorlevel": null,
+        "exactarch": null,
+        "exclude": null,
+        "gpgcheck": true,
+        "group_package_types": null,
+        "groupremove_leaf_only": null,
+        "history_list_view": null,
+        "history_record": null,
+        "history_record_packages": null,
+        "http_caching": null,
+        "installonly_limit": null,
+        "installonlypkgs": null,
+        "installroot": null,
+        "keepalive": null,
+        "keepcache": false,
+        "kernelpkgnames": null,
+        "localpkg_gpgcheck": false,
+        "logfile": "/var/log/yum.log",
+        "max_retries": null,
+        "mdpolicy": null,
+        "metadata_expire": null,
+        "mirrorlist_expire": null,
+        "multilib_policy": null,
+        "obsoletes": null,
+        "overwrite_groups": null,
+        "password": null,
+        "path": "/etc/yum.conf",
+        "persistdir": null,
+        "pluginconfpath": null,
+        "pluginpath": null,
+        "plugins": null,
+        "protected_multilib": null,
+        "protected_packages": null,
+        "proxy": null,
+        "proxy_password": null,
+        "proxy_username": null,
+        "recent": null,
+        "releasever": null,
+        "repo_gpgcheck": null,
+        "reposdir": null,
+        "reset_nice": null,
+        "rpmverbosity": null,
+        "showdupesfromrepos": null,
+        "skip_broken": null,
+        "ssl_check_cert_permissions": null,
+        "sslcacert": null,
+        "sslclientcert": null,
+        "sslclientkey": null,
+        "sslverify": null,
+        "syslog_device": null,
+        "syslog_facility": null,
+        "syslog_ident": null,
+        "throttle": null,
+        "timeout": null,
+        "tolerant": false,
+        "tsflags": null,
+        "username": null
+      },
+      "epel-debuginfo": {
+        "repositoryid": "epel-debuginfo",
+        "failovermethod": "priority",
+        "gpgcheck": true,
+        "enabled": false,
+        "managed": false
+      },
+      "epel-source": {
+        "repositoryid": "epel-source",
+        "failovermethod": "priority",
+        "gpgcheck": true,
+        "enabled": false,
+        "managed": false
+      },
+      "epel-testing-debuginfo": {
+        "repositoryid": "epel-testing-debuginfo",
+        "failovermethod": "priority",
+        "gpgcheck": true,
+        "enabled": false,
+        "managed": false
+      },
+      "epel-testing-source": {
+        "repositoryid": "epel-testing-source",
+        "failovermethod": "priority",
+        "gpgcheck": true,
+        "enabled": false,
+        "managed": false
+      },
+      "epel-testing": {
+        "repositoryid": "epel-testing",
+        "failovermethod": "priority",
+        "gpgcheck": true,
+        "enabled": false,
+        "managed": false
+      },
+      "epel": {
+        "repositoryid": "epel",
+        "failovermethod": "priority",
+        "gpgcheck": true,
+        "enabled": true,
+        "managed": true
+      }
+    },
+    "yum-epel": {
+      "repositories": [
+        "epel",
+        "epel-debuginfo",
+        "epel-source",
+        "epel-testing",
+        "epel-testing-debuginfo",
+        "epel-testing-source"
+      ]
+    },
+    "git": {
+      "prefix": "/usr/local",
+      "version": "1.9.5",
+      "url": "https://nodeload.github.com/git/git/tar.gz/v1.9.5",
+      "checksum": "0f30984828d573da01d9f8e78210d5f4c56da1697fd6d278bad4cfa4c22ba271",
+      "use_pcre": false,
+      "server": {
+        "base_path": "/srv/git",
+        "export_all": "true"
+      }
+    },
+    "ohai": {
+      "plugin_path": "/etc/chef/ohai_plugins",
+      "hints_path": "/etc/chef/ohai/hints",
+      "plugins": {
+        "ohai": "plugins"
+      }
+    },
+    "rbenv": {
+      "user": "rbenv",
+      "group": "rbenv",
+      "manage_home": true,
+      "group_users": [
+
+      ],
+      "git_repository": "https://github.com/sstephenson/rbenv.git",
+      "git_revision": "master",
+      "install_prefix": "/opt",
+      "root_path": "/opt/rbenv",
+      "user_home": "/home/rbenv"
+    },
+    "ruby_build": {
+      "git_repository": "https://github.com/sstephenson/ruby-build.git",
+      "git_revision": "master"
+    },
+    "rbenv_vars": {
+      "git_repository": "https://github.com/sstephenson/rbenv-vars.git",
+      "git_revision": "master"
+    },
+    "rbenv_install_rubies": {
+      "global_version": "2.0.0-p247",
+      "gems": [
+        "bundler",
+        "rbenv-rehash",
+        "pry"
+      ],
+      "other_versions": [
+
+      ],
+      "lib_packages": [
+
+      ]
+    },
+    "authorization": {
+      "sudo": {
+        "groups": [
+          "sysadmin",
+          "deployers"
+        ],
+        "users": [
+          "deployer"
+        ],
+        "passwordless": "true",
+        "include_sudoers_d": false,
+        "agent_forwarding": false,
+        "sudoers_defaults": [
+          "!lecture,tty_tickets,!fqdn"
+        ],
+        "command_aliases": [
+
+        ],
+        "env_keep_add": [
+
+        ],
+        "env_keep_subtract": [
+
+        ],
+        "prefix": "/etc"
+      }
+    },
+    "ssh_authorized_keys": {
+      "keytypes": [
+        "ecdsa-sha2-nistp256",
+        "ecdsa-sha2-nistp384",
+        "ecdsa-sha2-nistp521",
+        "ssh-ed25519",
+        "ssh-dss",
+        "ssh-rsa"
+      ]
+    }
+  },
+  "automatic": {
+    "fqdn": "localhost",
+    "os": "linux",
+    "os_version": "3.13.0-105-generic",
+    "hostname": "VM-11-199-ubuntu",
+    "ipaddress": "10.154.11.199",
+    "roles": [
+      "deployer"
+    ],
+    "recipes": [
+      "rbenv",
+      "rbenv::default",
+      "rbenv-install-rubies",
+      "rbenv-install-rubies::default",
+      "sudo",
+      "sudo::default",
+      "apt-sources-switch",
+      "apt-sources-switch::default",
+      "custom::default",
+      "custom::deployer",
+      "apt::default",
+      "build-essential::default",
+      "build-essential::_debian",
+      "git::default",
+      "git::package",
+      "rbenv::ruby_build"
+    ],
+    "platform": "ubuntu",
+    "platform_version": "14.04",
+    "cloud_v2": null,
+    "chef_packages": {
+      "chef": {
+        "version": "12.18.31",
+        "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.3.0/gems/chef-12.18.31/lib"
+      },
+      "ohai": {
+        "version": "8.22.1",
+        "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.3.0/gems/ohai-8.22.1/lib/ohai"
+      }
+    }
+  },
+  "run_list": [
+    "role[deployer]"
+  ]
+}

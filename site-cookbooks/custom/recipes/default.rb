@@ -34,6 +34,17 @@ execute "only allow key based logins" do
   action :nothing
 end
 
+execute "remove nginx default site" do
+  command <<-EOF
+    sudo rm /etc/nginx/sites-enabled/default
+    EOF
+  action :nothing
+end
+
+service :nginx do
+	action :restart
+end
+
 execute "install mosh server" do
   command "sudo apt-get install -y mosh"
 end

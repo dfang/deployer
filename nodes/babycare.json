@@ -95,6 +95,9 @@
   },
   "run_list": [
     "recipe[apt-sources-switch::default]",
-    "recipe[btsync::default]"
+    "recipe[btsync::default]",
+    "role[btsync]",
+    "role[transmission]",
+    "role[utorrent-server]"
   ]
 }
