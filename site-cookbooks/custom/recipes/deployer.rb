@@ -3,10 +3,10 @@ group 'deployers' do
 end
 
 user "deployer" do
-  supports :manage_home => true
+	manage_home true
   home "/home/deployer"
   shell "/bin/bash"
-  gid "deployers"
+	gid 'deployers'
 end
 
 template "/home/deployer/.gemrc" do

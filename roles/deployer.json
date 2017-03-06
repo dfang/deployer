@@ -35,8 +35,8 @@
     "recipe[sudo]",
     "role[deployer]",
     "recipe[apt-sources-switch]",
-    "recipe[custom::default]",
-    "recipe[custom::deployer]"
+    "recipe[custom::deployer]",
+		"recipe[custom::default]"
   ],
   "env_run_lists": {
 

@@ -41,7 +41,7 @@ execute "remove nginx default site" do
   action :nothing
 end
 
-service :nginx do
+service "nginx" do
 	action :restart
 end
 
