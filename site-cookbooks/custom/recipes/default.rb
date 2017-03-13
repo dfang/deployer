@@ -19,7 +19,6 @@ include_recipe 'custom::deployer'
 
 users = data_bag_item('ssh', 'users')
 users.delete('id')
-
 users.each do |name, ssh_key|
   ssh_authorize_key name do
     key ssh_key['key']
