@@ -9,33 +9,39 @@
         "users": ["deployer"],
         "passwordless": "true"
       }
-    }
+    },
+		"rbenv_install_rubies": {
+			"global_version": "2.3.0",
+			"gems": ["bundler", "rbenv-rehash", "pry", {"rails": {"version": "4.2.0"}}],
+			"lib_packages": [
+				"nodejs", "nginx", "vim", "postgresql", "libpq-dev", "libmysqlclient-dev", "libsqlite3-dev", "sqlite3"
+			]
+		},
+		"postgresql": {
+		  "users": [
+		    {
+		      "username": "deployer",
+		      "password": "dpGV7gVtyFWP4xSwtx04i1f26P1KduthSO4e4cSRSEU=",
+		      "superuser": true,
+		      "replication": false,
+		      "createdb": true,
+		      "createrole": true,
+		      "inherit": true,
+		      "replication": false,
+		      "login": true
+		    }
+		  ]
+		}
   },
   "override_attributes": {
-    "rbenv_install_rubies": {
-      "global_version": "2.3.0",
-      "gems": ["bundler", "rbenv-rehash", "pry", {"rails": {"version": "4.2.0"}}],
-      "lib_packages": [
-                        "nodejs", "nginx", "vim", "postgresql", "libpq-dev", "libmysqlclient-dev", "libsqlite3-dev", "sqlite3"
-                      ]
-    },
-    "postgresql":{
-      "username":{
-        "postgres": "deployer"
-      },
-      "password":{
-        "postgres": "dpGV7gVtyFWP4xSwtx04i1f26P1KduthSO4e4cSRSEU="
-      }
-    }
-  },
+	},
   "chef_type": "role",
   "run_list": [
     "recipe[rbenv]",
     "recipe[rbenv-install-rubies]",
+		"recipe[postgresql::setup_users]",
     "recipe[sudo]",
-    "role[deployer]",
     "recipe[apt-sources-switch]",
-    "recipe[custom::deployer]",
 		"recipe[custom::default]"
   ],
   "env_run_lists": {

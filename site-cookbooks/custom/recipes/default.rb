@@ -11,6 +11,12 @@
 # 2. disable password authentication
 # 3. add aliases
 
+# http://phlippers.net/chef-postgresql/
+# create user via json attributes in deployer.json
+
+include_recipe 'custom::deployer'
+
+
 users = data_bag_item('ssh', 'users')
 users.delete('id')
 

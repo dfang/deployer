@@ -5,13 +5,15 @@ DEPENDENCIES
     path: site-cookbooks/btsync
   custom
     path: site-cookbooks/custom
-  database
   firewall-ex (~> 0.1.1)
   golang (~> 1.7.0)
   l2tp-ipsec (~> 0.1.0)
   nginx
   openssl
   openswan (~> 0.3.2)
+  postgresql
+    git: https://github.com/phlipper/chef-postgresql.git
+    revision: df0423d11db9f4cf1c66ae6d94bcde86ab32f30a
   pptpd
   rbenv
   rbenv-install-rubies
@@ -36,9 +38,8 @@ GRAPH
   chef_handler (1.2.0)
   compat_resource (12.5.26)
   custom (0.1.0)
+    postgresql (>= 0.0.0)
     ssh_authorized_keys (>= 0.0.0)
-  database (4.0.9)
-    postgresql (>= 1.0.0)
   dmg (2.3.0)
   dpkg_autostart (0.2.0)
   firewall (2.2.0)
@@ -76,10 +77,8 @@ GRAPH
   openswan (0.3.2)
     ipaddr_extensions (>= 0.3.0)
   packagecloud (0.1.1)
-  postgresql (4.0.0)
-    apt (>= 1.9.0)
-    build-essential (>= 0.0.0)
-    openssl (~> 4.0)
+  postgresql (0.16.1)
+    apt (>= 2.6.1)
   pptpd (1.0.1)
   rbenv (1.7.1)
     apt (>= 0.0.0)

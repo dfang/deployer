@@ -25,12 +25,18 @@
       ]
     },
     "postgresql": {
-      "username": {
-        "postgres": "deployer"
-      },
-      "password": {
-        "postgres": "dpGV7gVtyFWP4xSwtx04i1f26P1KduthSO4e4cSRSEU="
-      }
+      "users": [
+        {
+          "username": "deployer",
+          "password": "dpGV7gVtyFWP4xSwtx04i1f26P1KduthSO4e4cSRSEU=",
+          "superuser": true,
+          "replication": false,
+          "createdb": true,
+          "createrole": true,
+          "inherit": true,
+          "login": true
+        }
+      ]
     }
   },
   "normal": {

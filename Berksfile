@@ -32,11 +32,10 @@ cookbook 'btsync', path: 'site-cookbooks/btsync'
 
 
 cookbook 'rbenv'
-cookbook 'database'
+cookbook 'postgresql', git: "https://github.com/phlipper/chef-postgresql.git"
 cookbook 'sudo'
 cookbook 'rbenv-install-rubies'
 cookbook 'nginx'
 
 cookbook 'apt-sources-switch', path: 'site-cookbooks/apt-sources-switch'
 cookbook 'custom', path: 'site-cookbooks/custom'
-
