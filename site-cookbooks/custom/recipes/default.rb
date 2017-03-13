@@ -37,14 +37,16 @@ execute "only allow key based logins" do
     cat tmp_sshd_config > /etc/ssh/sshd_config
     rm tmp_sshd_config
     EOF
-  action :nothing
+end
+
+service "ssh" do
+  action :restart
 end
 
 execute "remove nginx default site" do
   command <<-EOF
     sudo rm /etc/nginx/sites-enabled/default
     EOF
-  action :nothing
 end
 
 service "nginx" do
@@ -53,8 +55,4 @@ end
 
 execute "install mosh server" do
   command "sudo apt-get install -y mosh"
-end
-
-service "ssh" do
-  action :restart
 end
