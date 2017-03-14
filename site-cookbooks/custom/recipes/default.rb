@@ -42,10 +42,11 @@ service "ssh" do
   action :restart
 end
 
-execute "remove nginx default site" do
-  command <<-EOF
-    sudo rm /etc/nginx/sites-enabled/default
-    EOF
+
+# remove nginx default site
+file '/etc/nginx/sites-enabled/default' do
+  action :delete
+  only_if { File.exist? '/etc/nginx/sites-enabled/default' }
 end
 
 service "nginx" do

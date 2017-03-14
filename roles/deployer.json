@@ -16,21 +16,6 @@
 			"lib_packages": [
 				"nodejs", "nginx", "vim", "postgresql", "libpq-dev", "libmysqlclient-dev", "libsqlite3-dev", "sqlite3"
 			]
-		},
-		"postgresql": {
-		  "users": [
-		    {
-		      "username": "deployer",
-		      "password": "dpGV7gVtyFWP4xSwtx04i1f26P1KduthSO4e4cSRSEU=",
-		      "superuser": true,
-		      "replication": false,
-		      "createdb": true,
-		      "createrole": true,
-		      "inherit": true,
-		      "replication": false,
-		      "login": true
-		    }
-		  ]
 		}
   },
   "override_attributes": {
@@ -40,6 +25,7 @@
     "recipe[rbenv]",
     "recipe[rbenv-install-rubies]",
 		"recipe[postgresql::setup_users]",
+		"recipe[postgresql::setup_databases]",
     "recipe[sudo]",
     "recipe[apt-sources-switch]",
 		"recipe[custom::default]"
